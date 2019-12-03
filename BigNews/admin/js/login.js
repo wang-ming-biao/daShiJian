@@ -50,6 +50,8 @@ $(function() {
             $('#myModal').modal();
             // 点击确认提示之后再进项跳转
             $('.modal-footer>button').click(function(){
+                // 将服务器返回的token令牌存入 localstrage
+                localStorage.setItem('token',backData.token);
                 // 通过window.location.href进行跳转;
                 window.location.href = './index.html';
             })
