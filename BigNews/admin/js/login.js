@@ -30,7 +30,7 @@ $(function() {
         // 与请求地址：/admin/user/login 进行拼接,
         // 请求方式 : post
         // 请求参数 : username password
-        url:'http://localhost:8080/api/v1/admin/user/login',
+        url: BigNew.user_login,
         type:'post',
         dataType:'json',
         data:{
