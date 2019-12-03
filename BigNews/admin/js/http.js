@@ -9,6 +9,7 @@
         baseURL:          baseURL,//项目基地址
         user_login:       baseURL + '/admin/user/login',//用户登录
         user_info:        baseURL + '/admin/user/info', //用户信息
+        user_detail:      baseURL + '/admin/user/detail',//用户详情
         user_edit:        baseURL + '/admin/user/edit',//用户编辑
         category_list:    baseURL + '/admin/category/list',//文章类别查询
         category_add:     baseURL + '/admin/category/add',//新增文章类别
