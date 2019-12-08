@@ -6,7 +6,7 @@ $(function() {
         1.1  非空判断
         1.2  获取用户名和密码
         1.3  ajax发送请求
-        1.4  相应数据之后跳转首页
+        1.4  响应数据之后跳转首页
     */ 
     $('.input_sub').click(function(e) {
         e.preventDefault();
@@ -43,7 +43,7 @@ $(function() {
         console.log(backData);
         // 进行判断,验证用户输入的账号密码是不是对的
         if (backData.code == 200) {
-            // 若后台范慧慧的code值等于200,那么久代表验证通过,
+            // 若后台返回的code值等于200,那么久代表验证通过,
                     // 使用bootstrap的模态框
             // 修改模态框的文字
             $('.modal-body>p').text('登陆成功');

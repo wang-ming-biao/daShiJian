@@ -19,7 +19,7 @@ $(function() {
         success: function(backData){
         console.log(backData);
         // 进入主页之后渲染个人信息
-        $('.user_info>span').text('欢迎'+backData.data.nickname);
+        $('.user_info>span').text('欢迎--'+backData.data.nickname);
         // 将管理员的名字设置为系统请求回来的
         $('.user_info>img').attr('src',backData.data.userPic);
         // 将管理员头像设置为跟随系统请求回来的
@@ -93,5 +93,7 @@ $(function() {
     $('.level02>li').click(function(){
     // 为当前被点击到的标签增加一个“active”标签名，而其他的sibings（）进行排他，removeClass()方法移除没有被"active"类名
     $(this).addClass('active').siblings().removeClass('active');
-    })
-})
+    });
+
+    
+});

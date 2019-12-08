@@ -10,10 +10,20 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./libs/jedate/css/jeDate-test.css">
+    <link rel="stylesheet" href="./libs/jedate/css/jedate.css">
     <!-- jq -->
     <script src="./libs/jquery-1.12.4.min.js"></script>
     <!-- 模板引擎 -->
     <script src="./libs/template-web.js"></script>
+    <!-- jedate与wangEditor -->
+    <link type="text/css" rel="stylesheet" href="./libs/jedate/css/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="./libs/jedate/css/jedate.css">
+    <script type="text/javascript" src="./libs/jedate/js/jedate.js"></script>
+    <script src="./libs/wangEditor.min.js"></script>
+    <script src="./js/http.js"></script>
+    <script src="./js/article_edit.js"></script>
+    <script src="./libs/config.js"></script>
 </head>
 
 <body>
@@ -51,11 +61,20 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">发布时间：</label>
                     <div class="col-sm-4">
+                        <!-- 日期插件 -->
+                        <div class="jeinpbox">
+                            <input type="text" class="jeinput" id="testico" placeholder="YYYY-MM-DD">
+                            <div class="icons jebtns"
+                                onclick="jeDate('#testico',{trigger:false,format: 'YYYY-MM-DD',theme:{bgcolor:'#C81623',pnColor:'#FF6653'},zIndex:10002,},)">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">文章内容：</label>
                     <div class="col-sm-10">
+                        <!-- wangEditor -->
+                        <div id="editor"></div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -67,6 +86,12 @@
             </form>
         </div>
     </div>
+    <!-- 文章分类模板 -->
+    <script id="cat_list" type="text/html">
+    {{ each data v }}
+    <option value="{{ v.id}}">{{ v.name }}</option>
+    {{ /each }}
+    </script>
 </body>
 
 </html>
